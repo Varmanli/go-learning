@@ -1,5 +1,37 @@
 package main
 
+//func printUser(name string, age int) {
+//	fmt.Println("Name:", name, "Age:", age)
+//}
+
+//func calculateAge(birthYear, currentYear int) int {
+//	return currentYear - birthYear
+//}
+
+//func minMax(a, b int) (int, int) {
+//	if a < b {
+//		return a, b
+//	}
+//	return b, a
+//}
+
+//func average(numbers ...float64) float64 {
+//	sum := 0.0
+//	for _, number := range numbers {
+//		sum += number
+//	}
+//	return sum / float64(len(numbers))
+//}
+
+//	var sum = func(a, b int) int {
+//		return a + b
+//	}(10, 30)
+//
+//	func calculate(a, b int) (sum, multiply int) {
+//		sum = a + b
+//		multiply = a * b
+//		return
+//	}
 func main() {
 	//if
 	//age := 20
@@ -31,7 +63,6 @@ func main() {
 	//}
 
 	//for
-
 	//for i := 0; i < 5000; i++ {
 	//	fmt.Println(i)
 	//}
@@ -89,4 +120,31 @@ func main() {
 	//for index, r := range text {
 	//	fmt.Printf("%d -> %c\n", index, r)
 	//}
+
+	//functions
+	//printUser("Amirhosein", 24)
+
+	//age := calculateAge(2002, 2026)
+	//fmt.Println(age)
+
+	//minimum, maximum := minMax(10, 22)
+	//fmt.Println("Min:", minimum)
+	//fmt.Println("Max:", maximum)
+
+	//result := average(10, 20, 30)
+	//fmt.Println(result)
+
+	//scores := []float64{15, 18, 20, 17}
+	//
+	//result := average(scores...)
+	//fmt.Println(result)
+
+	//score := 10
+	//up5 := func() {
+	//	score += 5
+	//}
+	//up5()
+	//fmt.Println(score)
+
+	//fmt.Println(calculate(3, 4))
 }
