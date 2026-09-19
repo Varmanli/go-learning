@@ -1,5 +1,7 @@
 package main
 
+import "fmt"
+
 //func printUser(name string, age int) {
 //	fmt.Println("Name:", name, "Age:", age)
 //}
@@ -32,6 +34,91 @@ package main
 //		multiply = a * b
 //		return
 //	}
+
+//func increase(score *int) {
+//	*score += 10
+//}
+
+//	type Product struct {
+//		Name  string
+//		Price int
+//	}
+//
+//	func applyDiscount(product *Product) {
+//		product.Price -= 100
+//	}
+//
+// Method
+//type Product struct {
+//	Name  string
+//	Price int
+//}
+//
+//func (p Product) printInfo() {
+//	fmt.Println(p.Name, p.Price)
+//}
+
+//type User struct {
+//	Name string
+//	Age  int
+//}
+//
+//func (u *User) birthday() {
+//	u.Age++
+//}
+//
+//func (u *User) rename(name string) {
+//	u.Name = name
+//}
+
+// Printer Interfaces
+//type Printer interface {
+//	Print() string
+//}
+//
+//type Book struct {
+//	Title string
+//}
+
+//	func (b Book) Print() string {
+//		return b.Title
+//	}
+//
+//	func show(p Printer) {
+//		fmt.Println(p.Print())
+//	}
+//type Player interface {
+//	Play() string
+//	Stop()
+//}
+//
+//type musicPlayer struct{}
+//
+//func (m musicPlayer) Play() string {
+//	return "Play"
+//}
+//func (m musicPlayer) Stop() {
+//	fmt.Println("Stop")
+//}
+
+// Generic
+//func show[T any](a T) {
+//	fmt.Println(a)
+//}
+
+//func printPair[A any, B any](a A, b B) {
+//	fmt.Println(a, b)
+//}
+
+//type TextOrNumber interface {
+//	string | int
+//}
+
+type pair[A any, B any] struct {
+	First  A
+	Second B
+}
+
 func main() {
 	//if
 	//age := 20
@@ -122,7 +209,7 @@ func main() {
 	//}
 
 	//functions
-	//printUser("Amirhosein", 24)
+	//printUser("Ali", 24)
 
 	//age := calculateAge(2002, 2026)
 	//fmt.Println(age)
@@ -147,4 +234,58 @@ func main() {
 	//fmt.Println(score)
 
 	//fmt.Println(calculate(3, 4))
+	//Pointer
+	//age := 20
+	//p := &age
+	//*p = 24
+	//fmt.Println(age)
+
+	//score := 50
+	//increase(&score)
+	//increase(&score)
+	//increase(&score)
+	//fmt.Println(score)
+
+	//p := Product{
+	//	Name:  "Keyboard",
+	//	Price: 1000,
+	//}
+	//
+	//applyDiscount(&p)
+	//fmt.Println(p)
+
+	//p := Product{
+	//	Name:  "Keyboard",
+	//	Price: 1000,
+	//}
+	//p.printInfo()
+
+	//u := User{
+	//	Name: "Ali",
+	//	Age:  24,
+	//}
+	//
+	//u.birthday()
+	//u.rename("Amir")
+	//fmt.Println(u)
+
+	//Interfaces
+	//book := Book{
+	//	Title: "The little Prince",
+	//}
+
+	//show(book)
+
+	//show(5)
+	//show("hello")
+	//show(3.14)
+	//show(true)
+
+	//printPair(1, 2)
+	//printPair("Ali", 24)
+	//printPair(3.1415, 16)
+
+	p := pair[string, bool]{First: "Go", Second: true}
+
+	fmt.Println(p)
 }
